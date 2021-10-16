@@ -10,8 +10,8 @@ LDFLAGS+=-L$(RGB_LIBDIR) -lrgbmatrix -lrt -lm -lpthread
 all : $(BINARIES)
 
 
-matrixclock : matrixclock.o $(RGB_LIBRARY)
-	$(CXX) $(CXXFLAGS) matrixclock.o -o $@ $(LDFLAGS)
+matrixclock : matrixclock.o number.o $(RGB_LIBRARY)
+	$(CXX) $(CXXFLAGS) matrixclock.o number.o -o $@ $(LDFLAGS)
 
 
 %.o : %.cc
