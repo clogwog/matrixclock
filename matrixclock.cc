@@ -290,7 +290,6 @@ int main(int argc, char *argv[])
 
   syslog(LOG_NOTICE, "end of pongclock,natural end");
 
-
   canvas->Clear();
   delete canvas;
   return 0;
